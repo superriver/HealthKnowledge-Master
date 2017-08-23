@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:overScrollMode="never"
+    android:scrollbars="vertical"
+    tools:context=".module.ui.activity.HealthDetailActivity"
+    tools:showIn="@layout/activity_health_detail">
+  <!--android:background="?android:attr/itemBackground"-->
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:paddingBottom="0dp"
+      android:paddingLeft="64dp"
+      android:paddingRight="64dp"
+      android:paddingTop="0dp">
+
+    <TextView
+        android:id="@+id/tv_health_detail_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="8dp"
+        android:textColor="?android:textColorPrimary"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        tools:text="我爱你我爱你"/>
+
+    <TextView
+        android:id="@+id/tv_health_detail_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_health_detail_title"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textColor="?android:textColorPrimary"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        tools:text="2017-5-31"/>
+
+    <zhou.widget.RichText
+        android:id="@+id/tv_health_detail_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_health_detail_from"
+        android:layout_marginTop="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="16sp"
+        android:textColor="?android:textColorPrimary"
+        tools:text="天气"/>
+  </RelativeLayout>
+
+</android.support.v4.widget.NestedScrollView>
