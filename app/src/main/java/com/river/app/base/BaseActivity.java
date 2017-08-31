@@ -51,7 +51,7 @@ public abstract class BaseActivity extends AppCompatActivity {
   //  return new ActivityModule(this);
   //}
 
-  public void setToolBar(String title) {
+  public void setToolBar(String title,int resId) {
     Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
     if (toolbar != null) {
       toolbar.setContentInsetStartWithNavigation(0);
@@ -60,7 +60,9 @@ public abstract class BaseActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
       }
       getSupportActionBar().setTitle(title);
-      setToolbarIndicator(R.drawable.ic_menu_back);
+      if(resId!=-1){
+        setToolbarIndicator(resId);
+      }
     }
   }
 

@@ -16,7 +16,7 @@ public class HomeActivity extends BaseActivity {
   @Override protected void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
 
-    setToolBar("健康知识");
+    setToolBar("健康知识",-1);
      mainFragment =
         (MainFragment) getSupportFragmentManager().findFragmentById(R.id.contentFrame);
     if (mainFragment == null) {

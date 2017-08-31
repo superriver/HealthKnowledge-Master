@@ -19,7 +19,7 @@ public class HealthDetailActivity extends BaseActivity {
   private HealthDetailFragment mHealthDetailFragment;
   @Override protected void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setToolBar("健康详情");
+    setToolBar("健康详情",R.drawable.ic_menu_back);
 
     if(Build.VERSION.SDK_INT==Build.VERSION_CODES.KITKAT){
       getWindow().addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN);
