@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
+import android.view.MenuItem;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import com.river.app.App;
@@ -100,6 +101,14 @@ public abstract class BaseActivity extends AppCompatActivity {
       mUnbinder.unbind();
     }
   }
-
+  @Override public boolean onOptionsItemSelected(MenuItem item) {
+     if (item.getItemId() == android.R.id.home) {
+      if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+        finishAfterTransition();
+      } else {
+        finish();
+      }
+    } return true;
+  }
 
 }
